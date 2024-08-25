@@ -150,7 +150,7 @@ if __name__ == "__main__":
             agent=agent
         )
         results.append([step, episode_avg_return])
-    with open(f"eval_result/{args.run_name}.csv", "w") as fout:
+    with open(f"ckpt/{args.run_name}.csv", "w") as fout:
         fout.write("step, episode_avg_return\n")
         for step, episode_avg_return in results:
             fout.write(f"{step},{episode_avg_return}\n")
